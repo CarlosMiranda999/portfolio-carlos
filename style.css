@@ -1,3 +1,8 @@
+/* Rolagem suave ao clicar no menu */
+html {
+    scroll-behavior: smooth;
+}
+
 /* Reset básico para remover margens e espaçamentos padrões */
 * {
     margin: 0;
@@ -73,8 +78,21 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    text-align: center;
+    text-align: left;
     padding: 40px 20px;
+}
+
+.conteudo-apresentacao {
+    max-width: 1100px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 40px;
+}
+
+.texto-apresentacao {
+    flex: 1;
 }
 
 .apresentacao h2 {
@@ -84,7 +102,7 @@ body {
 
 .apresentacao p {
     max-width: 750px;
-    margin: 0 auto 25px auto;
+    margin-bottom: 25px;
     font-size: 18px;
 }
 
@@ -101,11 +119,28 @@ body {
     background-color: #e5e7eb;
 }
 
+/* Foto principal */
+.foto-apresentacao {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+
+.foto-apresentacao img {
+    width: 300px;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 5px solid white;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.35);
+}
+
 /* Seções principais */
 .secao {
     max-width: 1100px;
     margin: auto;
     padding: 70px 20px;
+    scroll-margin-top: 90px;
 }
 
 .secao h2 {
@@ -116,6 +151,21 @@ body {
 
 .secao p {
     margin-bottom: 15px;
+}
+
+/* Foto dentro da seção Sobre mim */
+.foto-sobre {
+    margin-top: 30px;
+    text-align: center;
+}
+
+.foto-sobre img {
+    max-width: 100%;
+    width: 850px;
+    max-height: 430px;
+    object-fit: cover;
+    border-radius: 12px;
+    box-shadow: 0 3px 12px rgba(0, 0, 0, 0.25);
 }
 
 /* Seções com fundo diferente */
@@ -258,8 +308,32 @@ body.tema-escuro textarea {
         gap: 10px;
     }
 
+    .apresentacao {
+        text-align: center;
+    }
+
+    .conteudo-apresentacao {
+        flex-direction: column;
+        text-align: center;
+    }
+
     .apresentacao h2 {
         font-size: 28px;
+    }
+
+    .apresentacao p {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .foto-apresentacao img {
+        width: 220px;
+        height: 220px;
+    }
+
+    .foto-sobre img {
+        width: 100%;
+        max-height: 300px;
     }
 
     .cards {
