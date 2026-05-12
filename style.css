@@ -1,0 +1,268 @@
+/* Reset básico para remover margens e espaçamentos padrões */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Estilo geral da página */
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #f4f6f8;
+    color: #222;
+    line-height: 1.6;
+}
+
+/* Cabeçalho e menu */
+.cabecalho {
+    background-color: #1f2937;
+    color: white;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+
+.menu {
+    max-width: 1100px;
+    margin: auto;
+    padding: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 22px;
+}
+
+.links-menu {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.links-menu a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.links-menu a:hover {
+    color: #93c5fd;
+}
+
+/* Botão para alternar tema */
+.botao-tema {
+    padding: 8px 12px;
+    border: none;
+    background-color: #2563eb;
+    color: white;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.botao-tema:hover {
+    background-color: #1d4ed8;
+}
+
+/* Área inicial de apresentação */
+.apresentacao {
+    min-height: 70vh;
+    background: linear-gradient(135deg, #1f2937, #2563eb);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 40px 20px;
+}
+
+.apresentacao h2 {
+    font-size: 36px;
+    margin-bottom: 15px;
+}
+
+.apresentacao p {
+    max-width: 750px;
+    margin: 0 auto 25px auto;
+    font-size: 18px;
+}
+
+.botao-principal {
+    background-color: white;
+    color: #1f2937;
+    padding: 12px 20px;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: bold;
+}
+
+.botao-principal:hover {
+    background-color: #e5e7eb;
+}
+
+/* Seções principais */
+.secao {
+    max-width: 1100px;
+    margin: auto;
+    padding: 70px 20px;
+}
+
+.secao h2 {
+    font-size: 30px;
+    margin-bottom: 20px;
+    color: #1f2937;
+}
+
+.secao p {
+    margin-bottom: 15px;
+}
+
+/* Seções com fundo diferente */
+.destaque {
+    background-color: #e5e7eb;
+    max-width: 100%;
+}
+
+.destaque > h2,
+.destaque > p,
+.destaque > .cards,
+.destaque > .formulario {
+    max-width: 1100px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Cards da formação e do portfólio */
+.cards {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
+    margin-top: 25px;
+}
+
+.card {
+    background-color: white;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.12);
+}
+
+.card h3 {
+    margin-bottom: 10px;
+    color: #2563eb;
+}
+
+.card a {
+    display: inline-block;
+    margin-top: 10px;
+    color: #2563eb;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.card a:hover {
+    text-decoration: underline;
+}
+
+/* Formulário de contato */
+.formulario {
+    background-color: white;
+    padding: 25px;
+    border-radius: 10px;
+    max-width: 700px;
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.12);
+}
+
+.formulario label {
+    display: block;
+    margin-top: 15px;
+    font-weight: bold;
+}
+
+.formulario input,
+.formulario textarea {
+    width: 100%;
+    padding: 12px;
+    margin-top: 6px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 15px;
+}
+
+.formulario button {
+    margin-top: 18px;
+    padding: 12px 20px;
+    background-color: #2563eb;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.formulario button:hover {
+    background-color: #1d4ed8;
+}
+
+.mensagem-retorno {
+    margin-top: 15px;
+    font-weight: bold;
+}
+
+/* Rodapé */
+.rodape {
+    background-color: #1f2937;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+/* Tema escuro aplicado pelo JavaScript */
+body.tema-escuro {
+    background-color: #111827;
+    color: #f9fafb;
+}
+
+body.tema-escuro .secao h2 {
+    color: #f9fafb;
+}
+
+body.tema-escuro .card,
+body.tema-escuro .formulario {
+    background-color: #1f2937;
+    color: #f9fafb;
+}
+
+body.tema-escuro .destaque {
+    background-color: #111827;
+}
+
+body.tema-escuro input,
+body.tema-escuro textarea {
+    background-color: #374151;
+    color: white;
+    border: 1px solid #6b7280;
+}
+
+/* Responsividade para telas menores */
+@media (max-width: 768px) {
+    .menu {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .links-menu {
+        flex-direction: column;
+        text-align: center;
+        gap: 10px;
+    }
+
+    .apresentacao h2 {
+        font-size: 28px;
+    }
+
+    .cards {
+        grid-template-columns: 1fr;
+    }
+}

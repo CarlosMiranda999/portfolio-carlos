@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+
+    <!-- Configuração para adaptar o site em computadores e celulares -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Portfólio | Carlos Eduardo Siqueira Miranda</title>
+
+    <!-- Ligação com o arquivo CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Cabeçalho principal do site -->
+    <header class="cabecalho">
+        <nav class="menu">
+            <h1 class="logo">Carlos Miranda</h1>
+
+            <!-- Menu com as seções obrigatórias -->
+            <ul class="links-menu">
+                <li><a href="#sobre">Sobre mim</a></li>
+                <li><a href="#formacao">Formação</a></li>
+                <li><a href="#portfolio">Portfólio</a></li>
+                <li><a href="#contato">Contato</a></li>
+            </ul>
+
+            <!-- Botão que será usado pelo JavaScript -->
+            <button id="botaoTema" class="botao-tema">Tema escuro</button>
+        </nav>
+    </header>
+
+    <main>
+
+        <!-- Apresentação inicial -->
+        <section class="apresentacao">
+            <div>
+                <h2>Olá, eu sou Carlos Eduardo Siqueira Miranda</h2>
+                <p>
+                    Estudante de Análise e Desenvolvimento de Sistemas, com experiência em liderança,
+                    logística e gestão, em transição para a área de tecnologia e desenvolvimento web.
+                </p>
+                <a href="#contato" class="botao-principal">Entrar em contato</a>
+            </div>
+        </section>
+
+        <!-- Seção Sobre Mim -->
+        <section id="sobre" class="secao">
+            <h2>Sobre mim</h2>
+
+            <p>
+                Meu nome é Carlos Eduardo Siqueira Miranda, sou de Lapa-PR e atualmente curso
+                Análise e Desenvolvimento de Sistemas pela UNINTER.
+            </p>
+
+            <p>
+                Tenho 8 anos de experiência no Exército Brasileiro, onde desenvolvi habilidades
+                importantes como liderança, disciplina, responsabilidade, organização e atuação em
+                atividades ligadas à logística. Essa vivência contribuiu bastante para minha formação
+                pessoal e profissional.
+            </p>
+
+            <p>
+                Nos últimos anos, comecei a direcionar meus estudos e objetivos profissionais para
+                a área de tecnologia, buscando aprender mais sobre programação, desenvolvimento web
+                e criação de soluções digitais.
+            </p>
+
+            <p>
+                Além disso, há menos de um ano também venho atuando com gestão de academia/CrossFit,
+                experiência que tem me proporcionado contato com atendimento ao público, organização
+                de processos e administração de um negócio.
+            </p>
+        </section>
+
+        <!-- Seção Formação -->
+        <section id="formacao" class="secao destaque">
+            <h2>Formação</h2>
+
+            <div class="cards">
+                <article class="card">
+                    <h3>Curso Superior</h3>
+                    <p>
+                        Análise e Desenvolvimento de Sistemas — UNINTER.
+                    </p>
+                </article>
+
+                <article class="card">
+                    <h3>Conhecimentos em tecnologia</h3>
+                    <p>
+                        Estudos em HTML, CSS, JavaScript, lógica de programação, banco de dados
+                        e fundamentos de desenvolvimento de sistemas.
+                    </p>
+                </article>
+
+                <article class="card">
+                    <h3>Experiência profissional</h3>
+                    <p>
+                        8 anos de experiência no Exército Brasileiro, com atuação em liderança,
+                        organização, logística e trabalho em equipe.
+                    </p>
+                </article>
+
+                <article class="card">
+                    <h3>Idiomas</h3>
+                    <p>
+                        Inglês: conhecimento intermediário.
+                    </p>
+                </article>
+            </div>
+        </section>
+
+        <!-- Seção Portfólio -->
+        <section id="portfolio" class="secao">
+            <h2>Portfólio</h2>
+
+            <p>
+                Nesta seção apresento alguns trabalhos acadêmicos desenvolvidos durante minha formação
+                em Análise e Desenvolvimento de Sistemas. Os projetos representam minha evolução nos
+                estudos de desenvolvimento web, banco de dados e lógica de programação.
+            </p>
+
+            <div class="cards">
+                <article class="card">
+                    <h3>Projeto 1: Portfólio Web Pessoal</h3>
+                    <p>
+                        Site desenvolvido para a disciplina de Fundamentos da Programação Web,
+                        utilizando HTML5, CSS3 e JavaScript. O projeto possui seções de apresentação,
+                        formação, portfólio e contato.
+                    </p>
+                    <a href="https://github.com/CarlosMiranda999/portfolio-carlos" target="_blank">Ver projeto</a>
+                </article>
+
+                <article class="card">
+                    <h3>Projeto 2: Banco de Dados Relacional</h3>
+                    <p>
+                        Trabalho acadêmico envolvendo modelagem MER, criação de banco de dados,
+                        tabelas, chaves primárias, chaves estrangeiras e consultas SQL.
+                    </p>
+                    <a href="Trabalho-Banco-de-Dados.pdf" target="_blank">Ver trabalho</a>
+                </article>
+
+                <article class="card">
+                    <h3>Projeto 3: Projeto Acadêmico em Python</h3>
+                    <p>
+                        Projeto acadêmico desenvolvido em Python, com arquivos organizados por classes
+                        como Game, Player, Enemy, Level e Menu. Também foi elaborado um diagrama de
+                        classes para representar a estrutura do sistema.
+                    </p>
+                    <a href="https://github.com/CarlosMiranda999/LPAProjetoAula/blob/master/MontainShooter/pythonProject/main.py" target="_blank">Ver projeto</a>
+                </article>
+            </div>
+        </section>
+
+        <!-- Seção Contato -->
+        <section id="contato" class="secao destaque">
+            <h2>Contato</h2>
+
+            <p>
+                Entre em contato comigo preenchendo o formulário abaixo.
+            </p>
+
+            <!-- Formulário obrigatório com validação em JavaScript -->
+            <form id="formContato" class="formulario">
+                <label for="nome">Nome</label>
+                <input type="text" id="nome" name="nome" placeholder="Digite seu nome">
+
+                <label for="email">E-mail</label>
+                <input type="email" id="email" name="email" placeholder="Digite seu e-mail">
+
+                <label for="mensagem">Mensagem</label>
+                <textarea id="mensagem" name="mensagem" rows="5" placeholder="Digite sua mensagem"></textarea>
+
+                <button type="submit">Enviar mensagem</button>
+
+                <!-- Mensagem exibida pelo JavaScript -->
+                <p id="mensagemRetorno" class="mensagem-retorno"></p>
+            </form>
+        </section>
+
+    </main>
+
+    <!-- Rodapé -->
+    <footer class="rodape">
+        <p>© 2026 - Carlos Eduardo Siqueira Miranda | Portfólio Pessoal</p>
+    </footer>
+
+    <!-- Ligação com o arquivo JavaScript -->
+    <script src="script.js"></script>
+</body>
+</html>
